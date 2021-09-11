@@ -111,7 +111,7 @@ player:GetMouse().KeyDown:Connect(function(key)
 	if key == "v" and Main.Size == UDim2.new(0, 560, 0, 319) then
         Main:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 	else
-		if key == "v" and Main.Size = UDim2.new(0, 0, 0, 0) then
+		if key == "v" and Main.Size == UDim2.new(0, 0, 0, 0) then
         Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 		end
 	end
