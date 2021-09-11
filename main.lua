@@ -100,14 +100,22 @@ function lib:Window(text, preset, closebind)
     Main.Parent = ui
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
     Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-    Main.BorderSizePixel = 1
-    Main.BorderColor3 = Color3.fromRGB(255, 0, 0)
-
+    Main.BorderSizePixel = 0
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 0, 0, 0)
     Main.ClipsDescendants = true
     Main.Visible = true
-    
+    player = game.Players.LocalPlayer
+
+player:GetMouse().KeyDown:Connect(function(key)
+	if key == "v" and MainFrame.Visible == false then
+        Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
+	else
+		if key == "v" and MainFrame.Visible == true then
+        Main:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
+		end
+	end
+end)
 
     TabHold.Name = "TabHold"
     TabHold.Parent = Main
